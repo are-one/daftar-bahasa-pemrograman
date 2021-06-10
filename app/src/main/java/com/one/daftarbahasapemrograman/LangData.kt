@@ -1,7 +1,7 @@
 package com.one.daftarbahasapemrograman
 
 object LangData {
-    private val langNames = arrayOf(
+    private val names = arrayOf(
         "C",
         "C++",
         "C#",
@@ -143,9 +143,9 @@ object LangData {
             // Membuat list kosong
             val list = arrayListOf<Lang>()
 
-            for (position in langNames.indices) {
+            for (position in names.indices) {
                 val lang = Lang()
-                lang.name = langNames[position]
+                lang.name = names[position]
                 lang.designed_by = designed_by[position]
                 lang.first_release = first_release[position]
                 lang.stable_release = stable_release[position]
