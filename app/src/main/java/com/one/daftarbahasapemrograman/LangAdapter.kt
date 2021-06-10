@@ -1,5 +1,6 @@
 package com.one.daftarbahasapemrograman
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -26,6 +27,19 @@ class LangAdapter(val listLang: ArrayList<Lang>): RecyclerView.Adapter<LangAdapt
 
         holder.tvName.text = lang.name
         holder.tvDetail.text = lang.detail
+
+        holder.itemView.setOnClickListener {
+            val detailLangIntent = Intent(it.context, DetailLangActivity::class.java)
+            detailLangIntent.putExtra(DetailLangActivity.EXTRA_NAME, lang.name)
+            detailLangIntent.putExtra(DetailLangActivity.EXTRA_DESIGNED_BY, lang.designed_by)
+            detailLangIntent.putExtra(DetailLangActivity.EXTRA_FIRST_RELEASE, lang.first_release)
+            detailLangIntent.putExtra(DetailLangActivity.EXTRA_STABLE_RELEASE, lang.stable_release)
+            detailLangIntent.putExtra(DetailLangActivity.EXTRA_PARADIGM, lang.paradigm)
+            detailLangIntent.putExtra(DetailLangActivity.EXTRA_DETAIL, lang.detail)
+            detailLangIntent.putExtra(DetailLangActivity.EXTRA_REFERENCE, lang.reference)
+            detailLangIntent.putExtra(DetailLangActivity.EXTRA_PHOTO, lang.photo)
+            it.context.startActivity(detailLangIntent)
+        }
     }
 
     override fun getItemCount(): Int {
