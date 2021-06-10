@@ -152,6 +152,7 @@ object LangData {
                 lang.detail = detail[position]
                 lang.reference = reference[position]
                 lang.photo = langImages[position]
+                list.add(lang)
             }
 
             return list
