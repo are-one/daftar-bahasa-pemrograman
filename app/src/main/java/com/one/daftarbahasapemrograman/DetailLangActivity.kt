@@ -2,6 +2,7 @@ package com.one.daftarbahasapemrograman
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.one.daftarbahasapemrograman.databinding.ActivityDetailLangBinding
 
 class DetailLangActivity : AppCompatActivity() {
 
@@ -16,9 +17,15 @@ class DetailLangActivity : AppCompatActivity() {
         const val EXTRA_PHOTO = "extra_photo"
     }
 
+    private lateinit var binding: ActivityDetailLangBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detail_lang)
+
+        binding = ActivityDetailLangBinding.inflate(layoutInflater)
+        val view = binding.root
+
+        setContentView(view)
 
         val name = intent.getStringExtra(EXTRA_NAME)
         val designedBy = intent.getStringExtra(EXTRA_DESIGNED_BY)
