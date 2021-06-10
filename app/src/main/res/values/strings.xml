@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Daftar Bahasa Pemrograman</string>
+    <string name="lang_name">Nama Bahasa Pemrograman</string>
+    <string name="lang_detail">Detail Bahasa Pemrograman</string>
 </resources>
