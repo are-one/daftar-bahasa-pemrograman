@@ -1,7 +1,8 @@
 package com.one.daftarbahasapemrograman
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import com.bumptech.glide.Glide
 import com.one.daftarbahasapemrograman.databinding.ActivityDetailLangBinding
 
 class DetailLangActivity : AppCompatActivity() {
@@ -36,5 +37,25 @@ class DetailLangActivity : AppCompatActivity() {
         val reference = intent.getStringExtra(EXTRA_REFERENCE)
         val photo = intent.getIntExtra(EXTRA_PHOTO, 0)
 
+        supportActionBar?.apply {
+            setTitle("Detail")
+            setDisplayHomeAsUpEnabled(true)
+        }
+
+        binding.tvItemName.text = name
+        binding.tvDesignedBy.text = designedBy
+        binding.tvFirstRelease.text = firstRelease
+        binding.tvStableRelease.text = stableRelease
+        binding.tvParadigm.text = paradigm
+        binding.tvDetail.text = detail
+        binding.tvReference.text = reference
+        Glide.with(this).load(photo).into(binding.imgItemPhoto)
+
+
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return super.onSupportNavigateUp()
     }
 }
