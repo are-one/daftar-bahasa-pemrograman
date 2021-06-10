@@ -2,4 +2,15 @@
     <string name="app_name">Daftar Bahasa Pemrograman</string>
     <string name="lang_name">Nama Bahasa Pemrograman</string>
     <string name="lang_detail">Detail Bahasa Pemrograman</string>
+    <string name="name">Arwan Prianto Mangidi</string>
+    <string name="email">arwanpriantomangidi@gmail.com</string>
+    <string name="label_about">About</string>
+    <string name="label_referensi">Referensi</string>
+    <string name="label_deskripsi">Deskripsi</string>
+    <string name="rilis_stabil_field">Rilis Stabil</string>
+    <string name="paradigma_field">Paradigma</string>
+    <string name="rilis_perdana_field">Rilis Perdana</string>
+    <string name="dirancang_oleh_field">Dirancang Oleh</string>
+    <string name="label_profil_bahasa">Profil Bahasa</string>
+    <string name="dummy_name_lang">JavaScript</string>
 </resources>
